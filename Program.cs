@@ -6,7 +6,7 @@ namespace Tron
     {
         static void Main(string[] args)
         {
-            
+            Cast cast = new Cast();
         } 
     }
 }

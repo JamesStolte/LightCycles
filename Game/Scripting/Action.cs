@@ -1,6 +1,7 @@
 using LightCycles.Game.Casting; 
 
-namespace Scripting
+
+namespace LightCycles.Game.Scripting;
 {
 
     public interface Action
@@ -11,6 +12,7 @@ namespace Scripting
 
 
 
+        void Execute(Cast cast, Script script);
 
 
 

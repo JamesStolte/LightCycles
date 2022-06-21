@@ -1,53 +1,54 @@
 using System;
-namespace Tron
+
+namespace Casting
 {
-    public class Snake : Actor
+    public class Bike : Actor
     {
         private List<Actor> segments = new List<Actor>();
-        public Snake()
+        public Bike()
         {
-            PrepareBody();
+            PrepareTrail();
         }
 
         /// <summary>
-        /// Gets the snake's body segments.
+        /// Gets the bikes's trail.
         /// </summary>
         /// <returns>The body segments in a List.</returns>
-        public List<Actor> GetBody()
+        public List<Actor> GetTrail()
         {
             return new List<Actor>(segments.Skip(1).ToArray());
         }
 
         /// <summary>
-        /// Gets the snake's head segment.
+        /// Gets the bike.
         /// </summary>
         /// <returns>The head segment as an instance of Actor.</returns>
-        public Actor GetHead()
+        public Actor GetBike()
         {
             return segments[0];
         }
 
         /// <summary>
-        /// Gets the snake's segments (including the head).
+        /// Gets the important points (including the bike and trail).
         /// </summary>
-        /// <returns>A list of snake segments as instances of Actors.</returns>
+        /// <returns>A list of bike and trail as instances of Actors.</returns>
         public List<Actor> GetSegments()
         {
             return segments;
         }
 
         /// <summary>
-        /// Grows the snake's tail by the given number of segments.
+        /// Grows the bike's trail by the given number of segments.
         /// </summary>
         /// <param name="numberOfSegments">The number of segments to grow.</param>
-        public void GrowTail(int numberOfSegments)
+        public void GrowTrail(int numberOfSegments)
         {
             for (int i = 0; i < numberOfSegments; i++)
             {
-                Actor tail = segments.Last<Actor>();
-                Point velocity = tail.GetVelocity();
+                Actor trail = segments.Last<Actor>();
+                Point velocity = trail.GetVelocity();
                 Point offset = velocity.Reverse();
-                Point position = tail.GetPosition().Add(offset);
+                Point position = trail.GetPosition().Add(offset);
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);
@@ -76,23 +77,23 @@ namespace Tron
         }
 
         /// <summary>
-        /// Turns the head of the snake in the given direction.
+        /// Turns the bike in the given direction.
         /// </summary>
         /// <param name="velocity">The given direction.</param>
-        public void TurnHead(Point direction)
+        public void TurnBike(Point direction)
         {
             segments[0].SetVelocity(direction);
         }
 
         /// <summary>
-        /// Prepares the snake body for moving.
+        /// Prepares the bike trail for moving.
         /// </summary>
-        private void PrepareBody()
+        private void PrepareTrail()
         {
             int x = Constants.MAX_X / 2;
             int y = Constants.MAX_Y / 2;
 
-            for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
+            for (int i = 0; i < Constants.TRAIL_LENGTH; i++)
             {
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);

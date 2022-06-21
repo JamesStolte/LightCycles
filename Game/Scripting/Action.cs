@@ -1,5 +1,6 @@
 using LightCycles.Game.Casting; 
 
+
 namespace LightCycles.Game.Scripting;
 {
 

@@ -1,7 +1,7 @@
-using LightCycles.Game.Services;
-namespace LightCycles.Game.Action;
+using Services;
+namespace LightCycles.Game;
 {
-    public class ChangeDirectionAction : Action
+    public class ChangeDirectionAction : Actor
     {
         private KeyboardServices keyboardServices;
         public ChangeDirectionAction(KeyboardServices keyboardServices)

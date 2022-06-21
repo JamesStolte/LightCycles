@@ -2,7 +2,7 @@ using System;
 using Raylib_cs;
 using LightCycles.Game.Casting;
 
-namespace LightCycles.Game.Services
+namespace Services
 {
 
 

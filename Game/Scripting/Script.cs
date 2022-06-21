@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace LightCycles.Game.Scripting
+namespace Scripting
 {
 
 

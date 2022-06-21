@@ -1,5 +1,6 @@
-using LightCycles.Game.Services;
-namespace LightCycles.Game.Action;
+
+
+namespace Scripting
 {
     public class ChangeDirectionAction : Action
     {

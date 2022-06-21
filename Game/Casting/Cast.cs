@@ -2,7 +2,7 @@ using System;
 
 namespace Tron
 {
-    public class Program
+    public class Cast
     {
 
     }

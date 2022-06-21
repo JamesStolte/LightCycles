@@ -3,29 +3,29 @@ namespace LightCycles.Game.Action;
 {
     public class ChangeDirectionAction : Action
     {
-        private KeyboardService keyboardService;
-        public ChangeDirectionAction(KeyboardService keyboardService)
+        private KeyboardServices keyboardServices;
+        public ChangeDirectionAction(KeyboardServices keyboardServices)
         {
-            this.keyboardService = keyboardService;
+            this.keyboardServices = keyboardServices;
         }
 
         private int rlvelocity = 0;
         private int velocity = 0;
         public void Execute()
         {
-            if (keyboardService.IsKeyDown("a"))
+            if (keyboardServices.IsKeyDown("a"))
             {
                 rlvelocity = -5;
             }
-            if (keyboardService.IsKeyDown("d"))
+            if (keyboardServices.IsKeyDown("d"))
             {
                 rlvelocity = 5;
             }
-            if (keyboardService.IsKeyDown("w"))
+            if (keyboardServices.IsKeyDown("w"))
             {
                 velocity = 5;
             }
-            if (keyboardService.IsKeyDown("s"))
+            if (keyboardServices.IsKeyDown("s"))
             {
                 velocity = -5;
             }

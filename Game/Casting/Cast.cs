@@ -1,6 +1,6 @@
 using System;
 
-namespace Tron
+namespace Casting
 {
     public class Cast
     {

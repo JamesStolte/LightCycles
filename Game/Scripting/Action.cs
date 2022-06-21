@@ -1,6 +1,6 @@
 using LightCycles.Game.Casting; 
 
-namespace LightCycles.Game.Action;
+namespace Scripting
 {
 
     public interface Action

@@ -2,7 +2,7 @@ using System;
 using Raylib_cs;
 using LightCycles.Game.Casting;
 
-namespace LightCycles.Game.VideoServices;
+namespace Services
 {
 
     // Contains all the VideoServices for our game

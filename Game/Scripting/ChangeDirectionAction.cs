@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 
 
 namespace Scripting
+=======
+using Services;
+namespace LightCycles.Game;
+>>>>>>> a4ea031b694b3738e785effda09e1506fa1a08fb
 {
-    public class ChangeDirectionAction : Action
+    public class ChangeDirectionAction : Actor
     {
         private KeyboardServices keyboardServices;
         public ChangeDirectionAction(KeyboardServices keyboardServices)

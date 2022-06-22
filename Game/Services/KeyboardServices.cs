@@ -1,6 +1,6 @@
 using System;
 using Raylib_cs;
-using LightCycles.Game.Casting;
+using Casting; 
 
 namespace Services
 {
